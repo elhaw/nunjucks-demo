@@ -12,6 +12,10 @@ const indexRouter = require('./routes/index');
 const app = express();
 // view engine setup
 
+// set default express engine and extension
+app.set('view engine', 'html');
+app.engine('nunj', nunjucks.render);
+
 
 new nunjucks.configure('views', {
   autoescape: true,
